@@ -1,0 +1,48 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		int pwd = 1234;
+		int balance = 0;
+		System.out.println("Enter the pin:");
+		int p = sc.nextInt();
+		if(pwd == p){
+		    do{
+		    System.out.println("1.Deposit\n2.Withdraw\n3.Balance enquiry\n4.Pin change\n5.Exit\n");
+		    int c = sc.nextInt();
+		    switch(c){
+		        case 1:
+		            System.out.println("Enter the amount to deposit:");
+		            int amt = sc.nextInt();
+		            if(amt%100==0){
+		                balance = balance+amt;
+		               System.out.println("Total amount in your account is:"+balance);
+		            }
+		            break;
+		       case 2:
+		            System.out.println("Enter the amount to withdraw:");
+		            int wdr = sc.nextInt();
+		            if(wdr%100==0){
+		                balance = balance-wdr;
+		               System.out.println("Total amount in your account is:"+balance);
+		            }
+		            break;
+		        case 3:
+		            System.out.println("The balance in your account is:"+balance);
+		            break;
+		        case 4:
+		            System.out.println("Enter the new pin:");
+		            int psd = sc.nextInt();
+		            pwd = psd;
+		            System.out.println("New pin is:"+pwd);
+		            break;
+		        case 5:
+		            System.exit(0);
+		    }
+		  }while(true);
+		}
+		
+		
+	}
+}
