@@ -1,0 +1,130 @@
+import java.util.Scanner;
+public class Main
+{
+    static int RandNum()
+    {
+        while(true)
+        {
+            int x = (int)((Math.random())*10);
+            if(x>=1&&x<=6)
+            return x;
+        }
+    }
+public static void main(String[] args) {
+  Scanner sc = new Scanner(System.in);
+  int s1=0;
+  int s2=0;
+  while(true){
+    System.out.println("Enter the player Number:");
+    int n =sc.nextInt();
+    if(n==1) {
+        int d = RandNum();
+        System.out.println("Dice value:"+d);
+        s1 = s1+d;
+        if(s1 == 7){
+            System.out.println("!!You got a ladder!!");
+            s1 = s1+14;
+        }
+        else if(s1 == 18){
+            System.out.println("!!You got a ladder!!");
+            s1=s1+16;
+        }
+        else if(s1==38){
+            System.out.println("!!You got a ladder!!");
+            s1=s1+30;
+        }
+        else if(s1==58){
+         System.out.println("!!You got a ladder!!");
+            s1 =s1+30;
+        }
+        else if(s1==72){
+         System.out.println("!!You got a ladder!!");
+            s1=s1+24;
+        }
+        else if(s1==23){
+         System.out.println("!!You got a snake!!");
+            s1=s1-20;
+        }
+        else if(s1==37){
+         System.out.println("!!You got a snake!!");
+            s1=s1-20;
+        }
+        else if(s1==55){
+           System.out.println("!!You got a snake!!");
+            s1=s1-30;
+        }
+        else if(s1==70){
+           System.out.println("!!You got a snake!!");
+            s1=s1-51;
+        }
+        else if(s1==98){
+           System.out.println("!!You got a snake!!");
+            s1=s1-90;
+        }
+        else if(s1==100){
+            System.out.println("!!!!!======== PLAYER 1 WON  =======!!!!!");
+        }
+         else if(s1>100){
+            System.out.println("!!!!!!INVALID!!!!!!");
+            break;
+        }
+      System.out.println("The score of player1 :"+s1);
+      System.out.println();
+    }
+    else{
+        int d = RandNum();
+        System.out.println("Dice value:"+d);
+        s2 = s2+d;
+        if(s2 == 7){
+            System.out.println("!!You got a ladder!!");
+            s2 = s2+14;
+        }
+        else if(s2 == 18){
+            System.out.println("!!You got a ladder!!");
+            s2=s2+16;
+        }
+        else if(s2==38){
+            System.out.println("!!You got a ladder!!");
+            s2=s2+30;
+        }
+        else if(s2==58){
+         System.out.println("!!You got a ladder!!");
+            s2 =s2+30;
+        }
+        else if(s2==72){
+         System.out.println("!!You got a ladder!!");
+            s2=s2+24;
+        }
+        else if(s2==23){
+         System.out.println("!!You got a snake!!");
+            s2=s2-20;
+        }
+        else if(s1==37){
+         System.out.println("!!You got a snake!!");
+            s2=s2-20;
+        }
+        else if(s2==55){
+           System.out.println("!!You got a snake!!");
+            s2=s2-30;
+        }
+        else if(s2==70){
+           System.out.println("!!You got a snake!!");
+            s2=s2-51;
+        }
+        else if(s2==98){
+           System.out.println("!!You got a snake!!");
+            s2=s2-90;
+        }
+        else if(s2==100){
+            System.out.println("!!!!!======== PLAYER 2 WON  =======!!!!!!");
+        }
+        else if(s2>100){
+             System.out.println("!!!!!!INVALID!!!!!!");
+             break;
+        }
+      System.out.println("The score of player2 :"+s2);
+      System.out.println();
+    }
+  }
+}
+}
